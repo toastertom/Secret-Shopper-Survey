@@ -41,7 +41,7 @@
     "correct" : 1
   },
   {
-    "question": "Were you offered in house financing?",
+    "question": "Were you offered in-house financing?",
     "answers" :[
       {"id" : 0, "text": "No"},
       {"id" : 1, "text": "Yes"}
