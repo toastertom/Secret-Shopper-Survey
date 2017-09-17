@@ -1,75 +1,59 @@
 [
   {
-    "question": "What is the name of the Kokiri blocking your path to the Great Deku Tree?",
+    "question": "Were you greeted upon entering the store?",
     "answers" :[
-      {"id" : 0, "text": "Fado"},
-      {"id" : 1, "text": "Saria"},
-      {"id" : 2, "text": "Mido"},
-      {"id" : 3, "text": "Makar"}
-    ],
-    "correct" : 2,
-    "feedback" : "That little prick. Blaming me for killing the Great Deku Tree."
-  },
-  {
-    "question": "How many sages are in Ocarina Of Time?",
-    "answers" :[
-      {"id" : 0, "text": "6"},
-      {"id" : 1, "text": "7"},
-      {"id" : 2, "text": "3"},
-      {"id" : 3, "text": "5"}
-    ],
-    "correct" : 1,
-    "feedback" : "Did you count Princess Zelda?"
-  },
-  {
-    "question": "What place is known as Kakariko Village?",
-    "answers" :[
-      {"id" : 0, "image": "images/llr.png"},
-      {"id" : 1, "image": "images/mp.png"},
-      {"id" : 2, "image": "images/kf.png"},
-      {"id" : 3, "image": "images/kkk.png"}
-    ],
-    "correct" : 3
-  },
-  {
-    "question": "What is the name Darunia's son?",
-    "answers" :[
-      {"id" : 0, "text": "Darun"},
-      {"id" : 1, "text": "Darmani"},
-      {"id" : 2, "text": "Buttface"},
-      {"id" : 3, "text": "Link"}
-    ],
-    "correct" : 3,
-    "feedback" : "That little guy, he just wont stop rollin."
-  },
-  {
-    "question": "What dungeon do you recieve the silver gauntlets?",
-    "answers" :[
-      {"id" : 0, "image": "images/st.png"},
-      {"id" : 1, "image": "images/ft.png"},
-      {"id" : 2, "image": "images/firetemple.png"},
-      {"id" : 3, "image": "images/wt.png"}
-    ],
-    "correct" : 0
-  },
-  {
-    "question": "What is at the bottom of the pool in the Lakeside Laboratory?",
-    "answers" :[
-      {"id" : 0, "text": "Heart Piece"},
-      {"id" : 1, "text": "Shark"},
-      {"id" : 2, "text": "Nothing"},
-      {"id" : 3, "text": "Small Fish"}
+      {"id" : 0, "text": "No"},
+      {"id" : 1, "text": "Yes"}
     ],
     "correct" : 1
   },
   {
-    "question": "Which one is Ganondorf's true from?",
+    "question": "Did you think the store was clean and organized?",
     "answers" :[
-      {"id" : 0, "image": "images/f.png"},
-      {"id" : 1, "image": "images/ga.png"},
-      {"id" : 2, "image": "images/g.png"},
-      {"id" : 3, "image": "images/i.png"}
+      {"id" : 0, "text": "No"},
+      {"id" : 1, "text": "Yes"}
     ],
-    "correct" : 2
+    "correct" : 1
+
+  },
+  {
+    "question": "Did the employee listen to your needs?",
+    "answers" :[
+      {"id" : 0, "text": "No"},
+      {"id" : 1, "text": "Yes"}
+    ],
+    "correct" : 1
+  },
+  {
+    "question": "Did the store have what you were looking for?",
+    "answers" :[
+      {"id" : 0, "text": "No"},
+      {"id" : 1, "text": "Yes"}
+    ],
+    "correct" : 1
+  },
+  {
+    "question": "Did the employee talk to you about our fall promotion?",
+    "answers" :[
+      {"id" : 0, "text": "No"},
+      {"id" : 1, "text": "Yes"}
+    ],
+    "correct" : 1
+  },
+  {
+    "question": "Were you offered in house financing?",
+    "answers" :[
+      {"id" : 0, "text": "No"},
+      {"id" : 1, "text": "Yes"}
+    ],
+    "correct" : 1
+  },
+  {
+    "question": "Would you say that you had a good experience overall?",
+    "answers" :[
+      {"id" : 0, "text": "No"},
+      {"id" : 1, "text": "Yes"}
+    ],
+    "correct" : 1
   }
 ]

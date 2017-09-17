@@ -6,7 +6,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #F2EDE7;
+  background-image: url("../images/happycashier.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -17,7 +17,7 @@ width: 650px;
 height: 650px;
 position: relative;
 overflow: hidden;
-background-color: rgba(213, 0, 1, 0.6);
+background-color: rgba(207, 168, 36, 0.6);
 color: #fff;
 }
 
@@ -87,6 +87,10 @@ color: #fff;
 }
 
 .quiz-container .progress div::after {
+  background-color: #D73930;
+}
+
+/*.quiz-container .progress div::after {
   content: '';
   display: block;
   position: absolute;
@@ -94,14 +98,14 @@ color: #fff;
   left: -10px;
   width: 50px;
   height: 80px;
-  background: url("../images/swordsheild.svg") no-repeat 0px 0px;
+  background: #D73930;
   transition: opacity 1s, top 1s;
   opacity: 0;
-}
+}*/
 
 .quiz-container .progress div.on,
 .quiz-container .progress div.answered {
-  background-color: #525EAB;
+  background-color: #fb782d;
 }
 
 .quiz-container .progress div.correct::after {
@@ -140,11 +144,11 @@ color: #fff;
 
 .quiz-container .question .answers {
   display: inline-block;
-  background-color: rgba(82, 94, 171, 0.4);
+  background-color: rgba(131, 24, 27, 0.4);
   font-size: 1.1em;
   height: 20px;
   width: 225px;
-  border: 2px solid #525eab;
+  border: 2px solid #83181b;
   border-radius: 6px;
   padding: 10px;
   margin: 0px 15px 15px 0px;
