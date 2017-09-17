@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="lozQuiz">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Legend of Zelda Quiz</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="styles/quizStyles.css"/>
+
+    <!-- Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-91416509-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+  </head>
+  <body>
+
+    <main ng-controller="mainCtrl">
+      <div class="quiz-container">
+        <h1>Legend Of Zelda Quiz: <span>Ocarina Of Time</span></h1>
+        <div class="progress">
+          <div class="
+            {{ ($index === activeQuestion) ? 'on' : 'off' }}
+            {{ (myQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}
+            {{ (myQuestion.correctness === 'correct') ? 'correct' : 'incorrect' }}"
+            ng-repeat="myQuestion in myQuestions">
+          </div>
+        </div>
+        <div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active' }}">
+          <h2>Welcome</h2>
+          <p>Click here to begin the challange.</p>
+          <p class="btn" ng-click="activeQuestion = 0">Begin</p>
+        </div>
+        <div class="question
+        {{ $index === activeQuestion ? 'active' : 'inactive' }}
+        {{ myQuestion.questionState === 'answered' ? 'answered' : 'unanswered' }}"
+        ng-repeat="myQuestion in myQuestions">
+          <p class="text">{{myQuestion.question}}</p>
+          <p class="answers"
+          ng-class="{
+            image : answer.image,
+            selected : isSelected($parent.$index, $index),
+            correct: isCorrect($parent.$index, $index) }"
+          ng-style="{ 'background-image': 'url({{ answer.image}})'}"
+          ng-click="selectAnswer($parent.$index, $index)"
+          ng-repeat="answer in myQuestions[$index].answers">
+            {{answer.text}}
+          </p>
+          <div class="feedback">
+            <p ng-show="myQuestion.correctness === 'correct'">
+              You are <strong>correct</strong>!
+            </p>
+            <p ng-show="myQuestion.correctness === 'incorrect'">
+              Oops! That is not correct...
+            </p>
+            <p>{{myQuestion.feedback}}</p>
+            <div class="btn" ng-click="selectContinue()">Continue</div>
+          </div>
+        </div>
+        <div class="results {{ (totalQuestions === activeQuestion) ? 'active' : 'inactive' }}">
+          <h3>Results</h3>
+          <p>
+            You scored {{percentage}}% by answering {{score}} of the {{totalQuestions}} questions correctly.
+          </p>
+          <p>
+            Use the links below to challenge your friends.
+          </p>
+          <div class="share" ng-bind-html="createShareLinks(percentage)"></div>
+        </div>
+
+      </div>
+    </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+  <script src="app.js"></script>
+
+  <!-- Controllers -->
+  <script src="controllers/mainCtrl.js"></script>
+  </body>
+</html>
