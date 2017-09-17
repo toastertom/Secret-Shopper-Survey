@@ -1,6 +1,7 @@
 /*General layout*/
 body {
   margin: 0px;
+  font-family: 'Roboto', sans-serif;
 }
 main {
   display: flex;

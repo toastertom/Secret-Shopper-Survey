@@ -9,12 +9,14 @@
 
     <link rel="stylesheet" href="styles/quizStyles.css"/>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   </head>
   <body>
 
     <main ng-controller="mainCtrl">
       <div class="quiz-container">
-        <h1>Secret Shopper: <span></span></h1>
+        <h1>Secret Shopper Fall 2017: <span>Steadmans</span></h1>
         <div class="progress">
           <div class="
             {{ ($index === activeQuestion) ? 'on' : 'off' }}
@@ -45,10 +47,10 @@
           </p>
           <div class="feedback">
             <p ng-show="myQuestion.correctness === 'correct'">
-              Thank you for your feedback!
+              Click below to continue.
             </p>
             <p ng-show="myQuestion.correctness === 'incorrect'">
-              Thank you for your feedback!
+              Click below to continue.
             </p>
             <p>{{myQuestion.feedback}}</p>
             <div class="btn" ng-click="selectContinue()">Continue</div>
